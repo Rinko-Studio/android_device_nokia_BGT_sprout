@@ -554,10 +554,9 @@ vendor/firmware/lagoon_ipa_fws.mdt
 vendor/firmware/mcfcheck.txt
 
 # Fingerprint
-vendor/lib64/hw/fingerprint.fpc.default.so:vendor/lib64/hw/fingerprint.lito.so
+vendor/lib64/hw/fingerprint.fpc.default.so:vendor/lib64/hw/fingerprint.fpc.lito.so
+vendor/lib/hw/fingerprint.fpc.default.so:vendor/lib/hw/fingerprint.fpc.lito.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
-vendor/etc/init/vendor.fingerprint.rc
-vendor/bin/fingerprint
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti

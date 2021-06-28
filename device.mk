@@ -229,7 +229,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.BGT_sprout \
-    android.hardware.biometrics.fingerprint@2.1.vendor.BGT_sprout
+    android.hardware.biometrics.fingerprint@2.1.vendor
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
