@@ -23,26 +23,29 @@ void property_override(char const prop[], char const value[]) {
 }
 
 void load_gauguin() {
-    property_override("ro.build.fingerprint", "Xiaomi/gauguin_global/gauguin:11/RKQ1.200826.002/V12.5.2.0.RJSMIXM:user/release-keys");
+    property_override("ro.build.fingerprint", "Xiaomi/gauguin_global/gauguin:12/SKQ1.211006.001/V13.0.4.0.SJSMIXM:user/release-keys");
     property_override("ro.product.brand", "Xiaomi");
     property_override("ro.product.device", "gauguin");
     property_override("ro.product.model", "M2007J17G");
     property_override("ro.boot.product.hardware.sku", "nfc");
+    property_override("ro.build.version.security_patch", "2022-07-01");
 }
 
 void load_gauguinpro() {
-    property_override("ro.build.fingerprint", "Redmi/gauguinpro/gauguinpro:11/RKQ1.200826.002/V12.5.3.0.RJSCNXM:user/release-keys");
+    property_override("ro.build.fingerprint", "Redmi/gauguinpro/gauguinpro:12/SKQ1.211006.001/V13.0.6.0.SJSCNXM:user/release-keys");
     property_override("ro.product.brand", "Redmi");
     property_override("ro.product.device", "gauguinpro");
     property_override("ro.product.model", "M2007J17C");
     property_override("ro.boot.product.hardware.sku", "nfc");
+    property_override("ro.build.version.security_patch", "2022-07-01");
 }
 
 void load_gauguininpro() {
-    property_override("ro.build.fingerprint", "Xiaomi/gauguininpro/gauguininpro:11/RKQ1.200826.002/V12.0.1.0.RJSINXM:user/release-keys");
+    property_override("ro.build.fingerprint", "Xiaomi/gauguininpro/gauguininpro:12/SKQ1.211006.001/V13.0.6.0.SJSINXM:user/release-keys");
     property_override("ro.product.brand", "Xiaomi");
     property_override("ro.product.device", "gauguininpro");
     property_override("ro.product.model", "M2007J17I");
+    property_override("ro.build.version.security_patch", "2022-08-01");
 }
 
 void vendor_load_properties() {
