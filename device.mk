@@ -17,18 +17,15 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call inherit-product, vendor/xiaomi/gauguin/gauguin-vendor.mk)
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
-
 PRODUCT_PACKAGES += \
+    CarrierConfigOverlayGauguin \
+    FrameworkResOverlayGauguin \
+    SettingsOverlayGauguin \
     SettingsOverlayM2007J17C \
     SettingsOverlayM2007J17G \
-    SettingsOverlayM2007J17I
-
-PRODUCT_ENFORCE_RRO_TARGETS := *
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig
+    SettingsOverlayM2007J17I \
+    SystemUIOverlayGauguin \
+    TelephonyOverlayGauguin \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
