@@ -14,23 +14,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/xiaomi/gauguin/gauguin-vendor.mk)
+$(call inherit-product, vendor/nokia/BGT_sprout/BGT_sprout-vendor.mk)
 
 # Overlays
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlayGauguin \
-    FrameworkResOverlayGauguin \
-    SettingsOverlayGauguin \
+    CarrierConfigOverlayBGT_sprout \
+    FrameworkResOverlayBGT_sprout \
+    SettingsOverlayBGT_sprout \
     SettingsOverlayM2007J17C \
     SettingsOverlayM2007J17G \
     SettingsOverlayM2007J17I \
-    SystemUIOverlayGauguin \
-    TelephonyOverlayGauguin \
+    SystemUIOverlayBGT_sprout \
+    TelephonyOverlayBGT_sprout \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
-    hardware/xiaomi
+    $(LOCAL_PATH)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
@@ -198,10 +197,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4-service.clearkey
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_gauguin
-
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
@@ -259,7 +254,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     init.recovery.qcom.rc \
     init.target.rc \
-    init.xiaomi.rc \
     ueventd.qcom.rc
 
 # IPACM
@@ -285,10 +279,6 @@ PRODUCT_COPY_FILES += \
 # Keystore
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
-
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_gauguin
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -374,10 +364,6 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
-# Parts
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # Perf
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
@@ -460,7 +446,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.xiaomi_gauguin
+    vendor.qti.hardware.vibrator.service
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vibrator/etc/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml

@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),gauguin)
+ifeq ($(TARGET_DEVICE),BGT_sprout)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 

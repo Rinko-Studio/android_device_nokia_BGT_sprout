@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/gauguin
+DEVICE_PATH := device/nokia/BGT_sprout
 
 # Architecture
 TARGET_ARCH := arm64
@@ -20,14 +20,14 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a76
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := gauguin,gauguinpro,gauguininpro
+TARGET_OTA_ASSERT_DEVICE := BGT_sprout
 
 # Build
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := gauguin
+TARGET_BOOTLOADER_BOARD_NAME := lito
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
@@ -40,8 +40,8 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_SOURCE := kernel/xiaomi/gauguin
-TARGET_KERNEL_CONFIG := vendor/gauguin_user_defconfig
+TARGET_KERNEL_SOURCE := kernel/BGT_sprout
+TARGET_KERNEL_CONFIG := vendor/lito_defconfig
 TARGET_KERNEL_LLVM_BINUTILS := false
 TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/kernel/linux-x86/clang-r416183b
 
@@ -80,10 +80,6 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 ODM_MANIFEST_NFC_FILES := $(DEVICE_PATH)/manifest_nfc.xml
 ODM_MANIFEST_SKUS += nfc
-
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_gauguin
-TARGET_RECOVERY_DEVICE_MODULES := libinit_gauguin
 
 # Media
 TARGET_USES_ION := true
@@ -191,4 +187,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
-include vendor/xiaomi/gauguin/BoardConfigVendor.mk
+include vendor/nokia/BGT_sprout/BoardConfigVendor.mk

@@ -5,8 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_gauguin.mk
+    $(LOCAL_DIR)/aosp_BGT_sprout.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_gauguin-userdebug \
-    aosp_gauguin-eng
+    aosp_BGT_sprout-userdebug \
+    aosp_BGT_sprout-eng

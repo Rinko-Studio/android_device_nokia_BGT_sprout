@@ -1,0 +1,7 @@
+runtime_resource_overlay {
+    name: "SettingsOverlayBGT_sprout",
+    theme: "SettingsOverlayBGT_sprout",
+    certificate: "platform",
+    sdk_version: "current",
+    product_specific: true
+}

@@ -27,14 +27,6 @@
 /dev/elliptic[0-9]                                                      u:object_r:ultrasound_device:s0
 /dev/mius(.*)?                                                          u:object_r:ultrasound_device:s0
 
-# Misys
-/vendor/bin/hw/vendor.xiaomi.hardware.misys@1.0-service                  u:object_r:hal_misys_default_exec:s0
-/vendor/bin/hw/vendor.xiaomi.hardware.misys@2.0-service                  u:object_r:hal_misys_default_exec:s0
-/vendor/bin/hw/vendor.xiaomi.hardware.misys@3.0-service                  u:object_r:hal_misys_default_exec:s0
-
-# Fingerprint
-/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service.xiaomi_gauguin                      u:object_r:hal_fingerprint_default_exec:s0
-
 # Fingerprint - devices
 /dev/goodix_fp                                                          u:object_r:fingerprint_device:s0
 
@@ -58,12 +50,6 @@
 /sys/devices/platform/soc/[a-z0-9]+.qcom,spmi/spmi-[0-1]/spmi0-0[0-9]/[a-z0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,leds@d000/leds(/.*)?            u:object_r:sysfs_leds:s0
 /sys/devices/platform/soc/[a-z0-9]+.i2c/i2c-[0-9]/[0-9]-[0-9]+/leds(/.*)?                                                                           u:object_r:sysfs_leds:s0
 
-# Lights
-/vendor/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_gauguin                                    u:object_r:hal_light_default_exec:s0
-
-# Mlipay
-/vendor/bin/mlipayd@1\.1                                                u:object_r:hal_mlipay_default_exec:s0
-
 # Persist subsystem
 /mnt/vendor/persist/subsys(/.*)?                                        u:object_r:persist_subsys_file:s0
 
@@ -83,12 +69,6 @@
 # Thermal
 /vendor/bin/mi_thermald                                                 u:object_r:mi_thermald_exec:s0
 /data/vendor/thermal(/.*)?                                              u:object_r:thermal_data_file:s0
-
-# USB
-/vendor/bin/init\.mi\.usb\.sh                                           u:object_r:vendor_qti_init_shell_exec:s0
-
-# Vibrator
-/vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.xiaomi_gauguin    u:object_r:hal_vibrator_default_exec:s0
 
 # WiFi
 /vendor/bin/nv_mac                                                      u:object_r:vendor_wcnss_service_exec:s0
