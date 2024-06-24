@@ -21,11 +21,8 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlayBGT_sprout \
     FrameworkResOverlayBGT_sprout \
     SettingsOverlayBGT_sprout \
-    SettingsOverlayM2007J17C \
-    SettingsOverlayM2007J17G \
-    SettingsOverlayM2007J17I \
     SystemUIOverlayBGT_sprout \
-    TelephonyOverlayBGT_sprout \
+    TelephonyOverlayBGT_sprout
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -264,11 +261,6 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
-# IR
-PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-impl \
-    android.hardware.ir@1.0-service
-
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
@@ -411,11 +403,6 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
     libsensorndkbridge
-
-# Shim
-PRODUCT_PACKAGES += \
-    libpiex_shim \
-    libweakcount_shim
 
 # Telephony
 PRODUCT_PACKAGES += \
