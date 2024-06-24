@@ -429,6 +429,9 @@ esac
 #
 # Make modem config folder and copy firmware config to that folder for RIL
 #
+
+mbn_update_flag=`getprop persist.vendor.mbn.flag` 
+
 if [ -f /data/vendor/modem_config/ver_info.txt ]; then
     prev_version_info=`cat /data/vendor/modem_config/ver_info.txt`
 else
@@ -443,11 +446,20 @@ if [ ! -f /vendor/firmware_mnt/verinfo/ver_info.txt -o "$prev_version_info" != "
     # preserve the read only mode for all subdir and files
     cp --preserve=m -dr /vendor/firmware_mnt/image/modem_pr/mcfg/configs/* /data/vendor/modem_config
     cp --preserve=m -d /vendor/firmware_mnt/verinfo/ver_info.txt /data/vendor/modem_config/
-    cp --preserve=m -d /vendor/firmware_mnt/image/modem_pr/mbn_ota.txt /data/vendor/modem_config/
+    #cp --preserve=m -d /vendor/firmware_mnt/image/modem_pr/mbn_ota.txt /data/vendor/modem_config/
     # the group must be root, otherwise this script could not add "W" for group recursively
-    chown -hR radio.root /data/vendor/modem_config/*
+    #chown -hR radio.root /data/vendor/modem_config/*
+    chmod 777 /data/vendor/modem_config/mcfg_sw/ -R
+    chown -hR radio.system /data/vendor/modem_config/mcfg_sw/*
+    setprop persist.vendor.mbn.flag 0
+else
+   case "$mbn_update_flag" in
+            "1")
+            setprop persist.vendor.mbn.bind 1
+            ;;
+   esac
 fi
-chmod g-w /data/vendor/modem_config
+#chmod g-w /data/vendor/modem_config
 setprop ro.vendor.ril.mbn_copy_completed 1
 
 #check build variant for printk logging
@@ -456,7 +468,7 @@ buildvariant=`getprop ro.build.type`
 case "$buildvariant" in
     "userdebug" | "eng")
         #set default loglevel to KERN_INFO
-        echo "7 4 1 7" > /proc/sys/kernel/printk
+        echo "6 6 1 7" > /proc/sys/kernel/printk
         ;;
     *)
         #set default loglevel to KERN_WARNING

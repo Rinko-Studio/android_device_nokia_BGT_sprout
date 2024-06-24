@@ -1,0 +1,55 @@
+on boot
+    mkdir /mnt/vendor/persist/bluetooth 0770 bluetooth bluetooth
+    
+    # Elableinfo partition
+    mkdir /mnt/vendor/elableinfo 0770 root system
+
+    chown root system /sys/kernel/dload/dload_enable
+    chmod 0660 /sys/kernel/dload/dload_enable
+
+    # Allow access to Double Tap to Wake gesture node
+    chown system system /proc/ilitek/gesture
+    chmod 0664 /proc/ilitek/gesture
+
+    # Fingerprint
+    chown system system /sys/devices/platform/soc/soc:fpc1020/clk_enable
+    chmod 0660 /sys/devices/platform/soc/soc:fpc1020/clk_enable
+    chown system system /sys/devices/platform/soc/soc:fpc1020/device_prepare
+    chmod 0660 /sys/devices/platform/soc/soc:fpc1020/device_prepare
+    chown system system /sys/devices/platform/soc/soc:fpc1020/driver_override
+    chmod 0660 /sys/devices/platform/soc/soc:fpc1020/driver_override
+    chown system system /sys/devices/platform/soc/soc:fpc1020/handle_wakelock
+    chmod 0660 /sys/devices/platform/soc/soc:fpc1020/handle_wakelock
+    chown system system /sys/devices/platform/soc/soc:fpc1020/hw_reset
+    chmod 0660 /sys/devices/platform/soc/soc:fpc1020/hw_reset
+    chown system system /sys/devices/platform/soc/soc:fpc1020/irq
+    chmod 0660 /sys/devices/platform/soc/soc:fpc1020/irq
+    chown system system /sys/devices/platform/soc/soc:fpc1020/modalias
+    chmod 0660 /sys/devices/platform/soc/soc:fpc1020/modalias
+    chown system system /sys/devices/platform/soc/soc:fpc1020/pinctl_set
+    chmod 0660 /sys/devices/platform/soc/soc:fpc1020/pinctl_set
+    chown system system /sys/devices/platform/soc/soc:fpc1020/power
+    chmod 0660 /sys/devices/platform/soc/soc:fpc1020/power
+    chown system system /sys/devices/platform/soc/soc:fpc1020/regulator_enable
+    chmod 0660 /sys/devices/platform/soc/soc:fpc1020/regulator_enable
+    chown system system /sys/devices/platform/soc/soc:fpc1020/uevent
+    chmod 0660 /sys/devices/platform/soc/soc:fpc1020/uevent
+    chown system system /sys/devices/platform/soc/soc:fpc1020/wakeup_enable
+    chmod 0660 /sys/devices/platform/soc/soc:fpc1020/wakeup_enable
+
+    # added for vibrator read calibration parameter
+    write /sys/class/leds/vibrator/cali_lra 1
+
+on fs
+	chown root system /mnt/vendor/elableinfo
+    chmod 0771 /mnt/vendor/elableinfo
+    restorecon_recursive /mnt/vendor/elableinfo
+    mkdir /mnt/vendor/elableinfo 0770 root system
+
+on post-fs-data
+    # Elableinfo partition
+    chown root system /mnt/vendor/elableinfo
+    chmod 0771 /mnt/vendor/elableinfo
+
+    mkdir /persist/data/tz 0700 system system
+    mkdir /persist/data/app_g 0700 system system
