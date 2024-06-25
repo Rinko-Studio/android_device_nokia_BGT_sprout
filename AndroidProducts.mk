@@ -5,8 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_BGT_sprout.mk
+    $(LOCAL_DIR)/lineage_BGT_sprout.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_BGT_sprout-userdebug \
-    aosp_BGT_sprout-eng
+    lineage_BGT_sprout-userdebug \
+    lineage_BGT_sprout-eng
