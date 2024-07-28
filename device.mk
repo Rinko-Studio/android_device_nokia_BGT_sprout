@@ -76,11 +76,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
-    frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
-    frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
-    frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
-    frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml \
-    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
@@ -188,14 +183,14 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
 # Camera
-PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64 \
-    libcamera2ndk_vendor \
-    libdng_sdk.vendor \
-    libgui_vendor \
-    vendor.qti.hardware.camera.device@1.0.vendor \
-    vendor.qti.hardware.camera.postproc@1.0.vendor
+# PRODUCT_PACKAGES += \
+#     android.hardware.camera.provider@2.4-impl \
+#     android.hardware.camera.provider@2.4-service_64 \
+#     libcamera2ndk_vendor \
+#     libdng_sdk.vendor \
+#     libgui_vendor \
+#     vendor.qti.hardware.camera.device@1.0.vendor \
+#     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 # Component overrides
 PRODUCT_COPY_FILES += \
@@ -230,6 +225,11 @@ PRODUCT_PACKAGES += \
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
+
+# Fingerprint
+# PRODUCT_PACKAGES += \
+#     android.hardware.biometrics.fingerprint@2.1-service \
+#     android.hardware.biometrics.fingerprint@2.1.vendor
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -502,4 +502,4 @@ PRODUCT_COPY_FILES += \
 
 # Vendor boot modules
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(KERNEL_PREBUILT)/modules/,$(TARGET_COPY_OUT_VENDOR_)/lib/modules)
+    $(call find-copy-subdir-files,*,$(KERNEL_PREBUILT)/modules/,$(TARGET_COPY_OUT_VENDOR)/lib/modules)

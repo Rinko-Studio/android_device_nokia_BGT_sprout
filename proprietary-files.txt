@@ -297,6 +297,8 @@ vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libsynx.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libvidhance.so
+
+# Need Patch - Patch
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
 # CDSP
@@ -552,7 +554,10 @@ vendor/firmware/lagoon_ipa_fws.mdt
 vendor/firmware/mcfcheck.txt
 
 # Fingerprint
-vendor/lib64/hw/fingerprint.fpc.default.so:vendor/lib64/hw/fingerprint.fpc.lito.so
+vendor/lib64/hw/fingerprint.fpc.default.so:vendor/lib64/hw/fingerprint.lito.so
+vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+vendor/etc/init/vendor.fingerprint.rc
+vendor/bin/fingerprint
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
@@ -819,10 +824,17 @@ vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
 # NFC
+vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
+vendor/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc
+vendor/lib64/vendor.nxp.hardware.nfc@2.0.so
+vendor/lib/nfc_nci.nqx.default.hw.so
+vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
+vendor/lib64/nfc_nci.nqx.default.hw.so
+vendor/lib64/se_nq_extn_client.so
 vendor/etc/libnfc-mtp-SN100.conf
 vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-qrd-SN100.conf
-vendor/lib/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so
+vendor/lib64/libsn100u_fw.so
 
 # Peripheral manager
 vendor/bin/pm-proxy
@@ -1012,7 +1024,6 @@ vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 vendor/radio/qcril_database/qcril.db
 
 # RIL (IMS)
--system_ext/app/ImsRcsService/ImsRcsService.apk
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
 system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar
