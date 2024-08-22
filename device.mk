@@ -227,9 +227,9 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 # Fingerprint
-# PRODUCT_PACKAGES += \
-#     android.hardware.biometrics.fingerprint@2.1-service \
-#     android.hardware.biometrics.fingerprint@2.1.vendor
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service.BGT_sprout \
+    android.hardware.biometrics.fingerprint@2.1.vendor.BGT_sprout
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
