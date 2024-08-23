@@ -301,6 +301,41 @@ vendor/lib64/libvidhance.so
 # Need Patch - Patch
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
+# Camera Firmware
+vendor/firmware/CAMERA_ICP.elf
+
+# Camera - Prebuilt
+vendor/bin/hw/android.hardware.camera.provider@2.4-service_64|83b32aabfa8eba95e4512e312b335674fd7c86be
+vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc|0becdfdcba99e2a911bf4079e16eb19cb4dc25f9
+vendor/lib/android.hardware.camera.provider@2.4-external.so|9cf5bf5e27f1b95067ff924213811185fa3371fd
+vendor/lib/android.hardware.camera.provider@2.4-legacy.so|8ba57251a8f21990fcb94278ffac376c433f124c
+vendor/lib/camera.device@1.0-impl.so|33792d50152f9efc6b9714222d005492e889c036
+vendor/lib/camera.device@3.2-impl.so|ab13986d69f0c70eb8e41303c1689ffd124ac399
+vendor/lib/camera.device@3.3-impl.so|3e5f0e0dc433b41c27b854c91eabfac6e96e632b
+vendor/lib/camera.device@3.4-external-impl.so|b70c3ecc0f0c814c9751ecedaab12bee438168d5
+vendor/lib/camera.device@3.4-impl.so|c836463f770c2d5977a9b5be51275787aa768c17
+vendor/lib/camera.device@3.5-external-impl.so|039b068c76bd410f969f6669e4725e8e47eb57a0
+vendor/lib/camera.device@3.5-impl.so|653e9a801a65397d921dcb5807608d1eb3f760f2
+vendor/lib/camera.device@3.6-external-impl.so|e3ab0d484c8f6f8a7961c5dcf7812e090d15ec57
+vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so|d7a75412eb0f000c20b135a570e3efd93a84e959
+vendor/lib/libcamera2ndk_vendor.so|16ed440370c28b912d5a8ca761cdddebbc13a0e7
+vendor/lib/libgui_vendor.so|cf128024de3cbd4443d2773aa8884fb89dbdb41c
+vendor/lib/vendor.qti.hardware.camera.device@1.0.so|8807c08a0b4ccd0aeb1ba28c9864cbdf3f54f4ef
+vendor/lib64/android.hardware.camera.provider@2.4-external.so|4fb02ad7fc9a0f2ff447db4095593ffef4b030c9
+vendor/lib64/android.hardware.camera.provider@2.4-legacy.so|8ec7a9c1f46f42c2f00fbf54afc25bb9a994e845
+vendor/lib64/camera.device@1.0-impl.so|feed89a7ba167b9a278e14c45ba77035ee29303c
+vendor/lib64/camera.device@3.2-impl.so|3b09b83f64bf67e88a67fa3c73787bf69c44f61c
+vendor/lib64/camera.device@3.3-impl.so|02967de84e2b84bc051e5ab7fb42e793bf10f256
+vendor/lib64/camera.device@3.4-external-impl.so|abc235cb9a30c96e0e8a3f0d6a8a8783a9c9ef24
+vendor/lib64/camera.device@3.4-impl.so|63e210daa089839a8692556ce2008a001fc92502
+vendor/lib64/camera.device@3.5-external-impl.so|b8826e45be51494efa7c3f19af36904b4f56692a
+vendor/lib64/camera.device@3.5-impl.so|113fb80b0668f321cf5d34f3b8ece3dbf60db4b9
+vendor/lib64/camera.device@3.6-external-impl.so|8c11bde413381598cd11fbc0a0804635142de3e5
+vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so|a631dcabfe38ad13dbfcb3cfe20f8a3ed376a59e
+vendor/lib64/libcamera2ndk_vendor.so|7329a2ff5c084e9231bfa91965ec86eb4e320241
+vendor/lib64/vendor.qti.hardware.camera.device@1.0.so|5c00b4eddb6103b5816ac4915164ae63699fbe1d
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so|717f20506c535c67bc19b3a7b7efe1da6c5cdf10
+
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
